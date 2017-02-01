@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.model" default-lazy="false">
+
+	<class name="Login" table="login" >
+		<id name="id" column="id" type="integer" >
+			<generator class="increment" />
+		</id>
+		<property name="mobileNumber" column="mobile_number" type="string" length="45"  not-null="true" />
+		<property name="password" column="password" type="string"  length="45" not-null="false" />
+
+	</class>
+</hibernate-mapping>
+<!-- private Integer id;
+	private String firstName;
+	private String lastName;
+	private String userName;
+	private String email;
+	private String mobileNumber;
+	private String password;
+	private Date createdDate;
+	private Date upatedDate; -->
