@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+    <session-factory>
+    <!--  *****   Database configuration  ******-->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/practice</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">false</property>
+        <property name="javax.persistence.validation.mode">none</property>
+        <!-- <property name="hbm2ddl.auto">create </property>  -->
+        <!--***** persistence class mapping ******* -->
+        <mapping resource="com/persistence/User.hbm.xml" />
+        <mapping resource="com/persistence/Login.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>
